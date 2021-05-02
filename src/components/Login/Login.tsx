@@ -37,19 +37,21 @@ export default function Login({ setToken }: LoginParams) {
     }
 
     return (
-        <Form className="form-signin text-center" onSubmit={handleSubmit}>
-            <img className="mb-3" src={logo} alt="NotJustAnna - Login" width="72" height="72"/>
+        <div className="login-wrapper">
+            <Form className="form-signin text-center" onSubmit={handleSubmit}>
+                <img className="mb-3" src={logo} alt="NotJustAnna - Login" width="72" height="72"/>
 
-            <FormLabel htmlFor="inputUser" srOnly>Username</FormLabel>
-            <FormControl type="text" id="inputUser" placeholder="Username" required autoFocus
-                         onChange={e => setUser(e.target.value)}/>
+                <FormLabel htmlFor="inputUser" srOnly>Username</FormLabel>
+                <FormControl type="text" id="inputUser" placeholder="Username" required autoFocus
+                             onChange={e => setUser(e.target.value)}/>
 
-            <FormLabel htmlFor="inputPass" srOnly>Password</FormLabel>
-            <FormControl type="password" id="inputPass" placeholder="Password" required
-                         onChange={e => setPass(e.target.value)}/>
+                <FormLabel htmlFor="inputPass" srOnly>Password</FormLabel>
+                <FormControl type="password" id="inputPass" placeholder="Password" required
+                             onChange={e => setPass(e.target.value)}/>
 
-            <Button block variant="secondary" size="lg" type="submit">Sign in</Button>
-            <p className="mt-5 mb-3 text-muted">&copy; {copyright(2021)}</p>
-        </Form>
+                <Button block variant="secondary" size="lg" type="submit">Sign in</Button>
+                <p className="mt-5 mb-3 text-muted">&copy; {copyright(2021)}</p>
+            </Form>
+        </div>
     )
 }

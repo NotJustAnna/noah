@@ -28,20 +28,30 @@ $green:   #00bc8c !default;
 $teal:    #20c997 !default;
 $cyan:    #3498db !default;
 
-$primary:       $blue !default;
-$secondary:     $gray-700 !default;
-$success:       $green !default;
+$primary:       saturate($blue, 10%) !default;
+$secondary:     darken($gray-700, 10%) !default;
+$success:       darken($green, 10%) !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-500 !default;
 $dark:          $gray-800 !default;
 
+// Custom Colors
+
+$darksecondary: darken($gray-800, 10%) !default;
+
+$colors: ();
+$theme-colors: (
+  "darksecondary":  $darksecondary
+);
+
+
 $yiq-contrasted-threshold:  175 !default;
 
 // Body
 
-$body-bg:                   $gray-900 !default;
+$body-bg:                   darken($gray-900, 10%) !default;
 $body-color:                $white !default;
 
 // Links

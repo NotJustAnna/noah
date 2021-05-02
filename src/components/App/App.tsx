@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import Login from '../Login/Login';
+import './App.scss';
+import Navbar from '../Navbar/Navbar';
+import Dashboard from '../Dashboard/Dashboard';
+import NavbarLink from '../Navbar/NavbarLink';
 
 export default function App() {
     const [token, setToken] = useState<string>();
@@ -8,6 +12,19 @@ export default function App() {
     if (!token) {
         return <Login setToken={setToken}/>
     }
+
+    const handleLogout = () => {
+        setToken(undefined);
+    }
+
+    return <Router>
+        <Navbar logOut={handleLogout}>
+            <NavbarLink exact to="/">Home</NavbarLink>
+            <NavbarLink to="/dashboard">Dashboard</NavbarLink>
+            <NavbarLink to="/actions">Actions</NavbarLink>
+        </Navbar>
+        <Dashboard/>
+    </Router>;
 
     return (
         <Router>
@@ -41,7 +58,7 @@ export default function App() {
                         <About/>
                     </Route>
                     <Route path="/dashboard">
-                        <Dashboard/>
+                        <></>
                     </Route>
                 </Switch>
             </div>
@@ -64,14 +81,6 @@ function About() {
     return (
         <div>
             <h2>About</h2>
-        </div>
-    );
-}
-
-function Dashboard() {
-    return (
-        <div>
-            <h2>Dashboard</h2>
         </div>
     );
 }
