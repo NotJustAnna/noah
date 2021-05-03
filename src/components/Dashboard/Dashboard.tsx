@@ -18,36 +18,6 @@ export default function Dashboard() {
                 <a className="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar
                     docs &raquo;</a>
             </div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
         </main>
     </>;
 }
